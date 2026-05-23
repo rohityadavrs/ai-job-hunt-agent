@@ -1,0 +1,95 @@
+/* ── Tabler Icons CDN ── */
+@import url("https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.31.0/dist/tabler-icons.min.css");
+
+/* ── Design tokens (light) ── */
+:root {
+  --color-text-primary: #0f0f0f;
+  --color-text-secondary: #6b7280;
+  --color-text-tertiary: #9ca3af;
+  --color-text-danger: #dc2626;
+  --color-text-success: #15803d;
+  --color-text-warning: #92400e;
+
+  --color-background-primary: #ffffff;
+  --color-background-secondary: #f3f4f6;
+  --color-background-success: #dcfce7;
+  --color-background-warning: #fef3c7;
+
+  --color-border-primary: #0f0f0f;
+  --color-border-secondary: #d1d5db;
+  --color-border-tertiary: #e5e7eb;
+
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 12px;
+
+  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+  font-family: var(--font-sans);
+  font-size: 16px;
+  color: var(--color-text-primary);
+  background: var(--color-background-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Dark mode ── */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-text-primary: #f9fafb;
+    --color-text-secondary: #9ca3af;
+    --color-text-tertiary: #6b7280;
+    --color-text-danger: #f87171;
+    --color-text-success: #4ade80;
+    --color-text-warning: #fbbf24;
+
+    --color-background-primary: #111827;
+    --color-background-secondary: #1f2937;
+    --color-background-success: #14532d;
+    --color-background-warning: #451a03;
+
+    --color-border-primary: #f9fafb;
+    --color-border-secondary: #374151;
+    --color-border-tertiary: #1f2937;
+  }
+}
+
+/* ── Base reset ── */
+*, *::before, *::after { box-sizing: border-box; }
+
+body { margin: 0; background: var(--color-background-secondary); }
+
+#root {
+  min-height: 100svh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 24px 16px;
+}
+
+/* ── App shell ── */
+.app-shell {
+  width: 100%;
+  max-width: 680px;
+  background: var(--color-background-primary);
+  border: 0.5px solid var(--color-border-tertiary);
+  border-radius: var(--border-radius-lg);
+  padding: 24px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 4px 16px rgba(0,0,0,0.04);
+}
+
+/* ── Form inputs ── */
+input, textarea {
+  width: 100%;
+  padding: 8px 10px;
+  border: 0.5px solid var(--color-border-secondary);
+  border-radius: var(--border-radius-md);
+  background: var(--color-background-primary);
+  color: var(--color-text-primary);
+  font-family: var(--font-sans);
+  outline: none;
+  transition: border-color 0.2s;
+}
+input:focus, textarea:focus {
+  border-color: var(--color-border-primary);
+}
